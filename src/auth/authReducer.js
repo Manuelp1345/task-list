@@ -18,6 +18,14 @@ export const authReducer = (state = {}, action) => {
       localStorage.setItem("logged", "false");
       return state;
 
+    case types.Check:
+      if (login.checkIsAuthorized())
+        localStorage.setItem(
+          "logged",
+          JSON.stringify(login.checkIsAuthorized())
+        );
+      return state;
+
     default:
       return state;
   }

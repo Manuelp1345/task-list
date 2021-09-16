@@ -5,6 +5,10 @@ import { types } from "../../types/types";
 export const LoginScreen = ({ history }) => {
   const { dispatch } = useContext(AuthContext);
 
+  dispatch({
+    type: types.Check,
+  });
+
   const handleLogin = () => {
     history.replace("/");
     dispatch({

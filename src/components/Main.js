@@ -2,10 +2,18 @@ import { HashRouter as Router } from "react-router-dom";
 import { AppProvider } from "@8base/app-provider";
 import { Spinner } from "react-bootstrap";
 import Containers from "./ContainersItems";
+import { useContext } from "react";
+import { AuthContext } from "../auth/AuthContext";
+import { types } from "../types/types";
 
 const ENDPOINT_URL = "https://api.8base.com/cktkpyrbz00lt06jycm663jhk";
 
 function Main() {
+  const { dispatch } = useContext(AuthContext);
+  dispatch({
+    type: types.Check,
+  });
+
   return (
     <Router>
       <AppProvider uri={ENDPOINT_URL}>

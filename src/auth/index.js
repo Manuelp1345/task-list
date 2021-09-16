@@ -18,3 +18,5 @@ export const login = Auth.createClient(
     logoutRedirectUri,
   }
 );
+
+console.log(login.checkIsAuthorized());
