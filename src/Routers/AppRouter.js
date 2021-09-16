@@ -22,6 +22,11 @@ export const AppRouter = () => {
             component={DashboardRoutes}
             isAuthenticated={user.logged}
           />
+          <PrivateRoute
+            path="/auth/callback"
+            component={DashboardRoutes}
+            isAuthenticated={user.logged}
+          />
         </Switch>
       </div>
     </Router>
