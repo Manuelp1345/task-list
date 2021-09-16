@@ -8,6 +8,7 @@ import PrivateRoute from "./PrivateRoute";
 
 export const AppRouter = () => {
   const { user } = useContext(AuthContext);
+  //comprobamos si el usuario esta auntenticado
   if (JSON.parse(localStorage.getItem("logged"))) {
     user.logged = true;
   }

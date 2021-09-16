@@ -5,12 +5,14 @@ import { types } from "../../types/types";
 export const LoginScreen = ({ history }) => {
   const { dispatch } = useContext(AuthContext);
 
+  //comprobamos si el usuario ya esta aunteticado
   useEffect(() => {
     dispatch({
       type: types.Check,
     });
   });
 
+  //realzamos el login
   const handleLogin = () => {
     dispatch({
       type: types.login,
