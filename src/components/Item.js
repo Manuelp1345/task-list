@@ -20,7 +20,8 @@ function Item({ id, text, state: status, removeTask, updateTask, reloadTask }) {
   const hanledRemoveItem = () => {
     removeTask(id);
   };
-  const hanledEditItem = () => {
+  const hanledEditItem = (e) => {
+    e.preventDefault();
     setEdit(!edit);
   };
 
@@ -61,12 +62,8 @@ function Item({ id, text, state: status, removeTask, updateTask, reloadTask }) {
         </div>
         <div id={id} className="d-flex flex-row justify-content-between me-2">
           <DropdownButton id="dropdown-basic-button" title="Options">
-            <Dropdown.Item href="#/action-1" onClick={hanledEditItem}>
-              Edit
-            </Dropdown.Item>
-            <Dropdown.Item href="#/action-2" onClick={hanledRemoveItem}>
-              Delete
-            </Dropdown.Item>
+            <Dropdown.Item onClick={hanledEditItem}>Edit</Dropdown.Item>
+            <Dropdown.Item onClick={hanledRemoveItem}>Delete</Dropdown.Item>
           </DropdownButton>
         </div>
       </div>
