@@ -19,5 +19,7 @@ test("load an display hello", async () => {
     />
   );
 
-  compo.getByText("hola");
+  const respuesta = compo.getByText("hola");
+
+  expect(respuesta).toHaveTextContent("hola");
 });
