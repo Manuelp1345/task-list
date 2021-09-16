@@ -9,7 +9,7 @@ export const LoginScreen = ({ history }) => {
     dispatch({
       type: types.Check,
     });
-  });
+  }, [dispatch]);
 
   const handleLogin = () => {
     dispatch({
