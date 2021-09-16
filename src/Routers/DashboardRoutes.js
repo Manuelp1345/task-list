@@ -8,7 +8,7 @@ export const DashboardRoutes = () => {
     <>
       <div className="container mt-2">
         <Switch>
-          <Route exact path="/task" component={Main} />
+          <Route path="/task" component={Main} />
 
           <Redirect to="/task" />
         </Switch>
