@@ -3,8 +3,8 @@ import { Auth, AUTH_STRATEGIES } from "@8base/auth";
 const domain =
   "https://6141333fe0de77000913e554.auth.us-east-1.amazoncognito.com";
 const clientId = "m8urc7ggf6tdo1klr3qahnvpu";
-const logoutRedirectUri = `${window.location.origin}/`;
-const redirectUri = `${window.location.origin}/login`;
+const logoutRedirectUri = `https://tasklist-manuel1345.netlify.app/login`;
+const redirectUri = `https://tasklist-manuel1345.netlify.app/`;
 
 export const login = Auth.createClient(
   {
